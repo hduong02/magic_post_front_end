@@ -10,7 +10,7 @@ import {
   chartBoxProduct,
   chartBoxRevenue,
   chartBoxUser,
-} from "../../data";
+} from "../../data/data";
 import "./home.scss";
 
 const Home = () => {

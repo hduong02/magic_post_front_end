@@ -1,14 +1,14 @@
-import Home from "./pages/home/Home";
+import Home from "../home/Home";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Accounts from "./pages/accounts/Accounts";
-import Products from "./pages/received_package/Products";
-import Navbar from "./components/navbar/Navbar";
-import Footer from "./components/footer/Footer";
-import Menu from "./components/menu/Menu";
-import Login from "./pages/login/Login";
-import "./styles/global.scss";
-import User from "./pages/user/User";
-import Product from "./pages/product/Product";
+import Accounts from "../accounts/Accounts";
+import Products from "../received_package/Products";
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
+import Menu from "../../components/menu/Menu";
+import Login from "../login/Login";
+import "../../styles//global.scss";
+import User from "../user/User";
+import Product from "../product/Product";
 import {
   QueryClient,
   QueryClientProvider,
@@ -17,7 +17,7 @@ import {
 
 const queryClient = new QueryClient();
 
-function App() {
+function Leader() {
   const Layout = () => {
     return (
       <div className="main">
@@ -73,4 +73,4 @@ function App() {
   return <RouterProvider router={router} />;
 }
 
-export default App;
+export default Leader;

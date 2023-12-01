@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import Leader from './pages/roles/Leader.tsx'
+import Staff from './pages/roles/Staff.tsx'
+
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <Staff/>
   </React.StrictMode>,
 )

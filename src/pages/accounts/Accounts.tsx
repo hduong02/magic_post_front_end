@@ -3,7 +3,7 @@ import DataTable from "../../components/dataTable/DataTable";
 import "./accounts.scss";
 import { useState } from "react";
 import Add from "../../components/add/Add";
-import { userRows } from "../../data";
+import { userRows } from "../../data/data";
 // import { useQuery } from "@tanstack/react-query";
 
 const columns: GridColDef[] = [

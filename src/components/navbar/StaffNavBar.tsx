@@ -1,6 +1,6 @@
 import "./navbar.scss";
 
-const Navbar = () => {
+const StaffNavbar = () => {
   return (
     <div className="navbar">
       <div className="logo">
@@ -13,14 +13,13 @@ const Navbar = () => {
         <img src="/expand.svg" alt="" className="icon" />
         <div className="notification">
           <img src="/notifications.svg" alt="" />
-          <span>1</span>
+          <span>5</span>
         </div>
         <div className="user">
           <img
-            src="https://images.pexels.com/photos/11038549/pexels-photo-11038549.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-            alt=""
+            src="https://static.vecteezy.com/system/resources/thumbnails/004/343/259/small/cute-puppy-or-dog-cartoon-illustration-animal-raising-hand-wildlife-icon-design-concept-isolated-flat-face-style-free-vector.jpg" alt=""
           />
-          <span>Trưởng điểm tập kết</span>
+          <span>Nhân viên điểm tập kết</span>
         </div>
         <img src="/settings.svg" alt="" className="icon" />
       </div>
@@ -28,4 +27,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default StaffNavbar;
