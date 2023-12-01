@@ -1,7 +1,7 @@
 import Home from "../home/Home";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Accounts from "../accounts/Accounts";
-import Products from "../received_package/Products";
+import Products from "../handle_orders/Products";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Menu from "../../components/menu/Menu";

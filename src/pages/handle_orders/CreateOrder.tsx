@@ -3,7 +3,7 @@ import "./Products.scss";
 import DataTable from "../../components/dataTable/DataTable";
 import Add from "../../components/add/Add";
 import { GridColDef } from "@mui/x-data-grid";
-import { products } from "../../data/data";
+import { confirmedOrder } from "../../data/staffData";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
@@ -16,44 +16,48 @@ const columns: GridColDef[] = [
   //   },
   // },
   {
-    field: "title",
+    field: "sender",
     type: "string",
     headerName: "Người gửi",
     width: 200,
   },
   {
-    field: "color",
+    field: "sender_number",
     type: "string",
     headerName: "SĐT người gửi",
     width: 200,
   },
   {
-    field: "price",
-    type: "string",
-    headerName: "Người nhận",
-    width: 200,
+    field: "approve",
+    headerName: "Actions",
+    width: 120,
+    renderCell: () => {
+      return (
+        <input type="checkbox"></input>
+      );
+    },
   },
-  {
-    field: "producer",
-    headerName: "SĐT người nhận",
-    type: "string",
-    width: 200,
-  },
-  {
-    field: "createdAt",
-    headerName: "Địa chỉ người nhận",
-    width: 200,
-    type: "string",
-  },
-  {
-    field: "inStock",
-    headerName: "Tổng thu",
-    width: 150,
-    type: "string",
-  },
+  // {
+  //   field: "producer",
+  //   headerName: "SĐT người nhận",
+  //   type: "string",
+  //   width: 200,
+  // },
+  // {
+  //   field: "createdAt",
+  //   headerName: "Địa chỉ người nhận",
+  //   width: 200,
+  //   type: "string",
+  // },
+  // {
+  //   field: "inStock",
+  //   headerName: "Tổng thu",
+  //   width: 150,
+  //   type: "string",
+  // },
 ];
 
-const Products = () => {
+const ApproveProducts = () => {
   const [open, setOpen] = useState(false);
 
   // TEST THE API
@@ -69,10 +73,10 @@ const Products = () => {
   return (
     <div className="products">
       <div className="info">
-        <h1>Hàng nhận</h1>
+        <h1>Các đơn hàng chờ xác nhận</h1>
         {/* <button onClick={() => setOpen(true)}>Add New Products</button> */}
       </div>
-      <DataTable slug="products" columns={columns} rows={products} />
+      <DataTable slug="products" columns={columns} rows={confirmedOrder} />
       {/* TEST THE API */}
 
       {/* {isLoading ? (
@@ -85,4 +89,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default ApproveProducts;

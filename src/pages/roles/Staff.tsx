@@ -1,14 +1,14 @@
 import Home from "../home/Home";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Accounts from "../accounts/Accounts";
-import Products from "../received_package/Products";
+import ApproveProducts from "../handle_orders/ApproveProducts";
+import CreateOrder from "../handle_orders/CreateOrder";
 import StaffNavbar from "../../components/navbar/StaffNavbar";
 import Footer from "../../components/footer/Footer";
 import StaffMenu from "../../components/menu/StaffMenu";
 import Login from "../login/Login";
 import "../../styles/global.scss";
 import User from "../user/User";
-import Product from "../product/Product";
 import {
   QueryClient,
   QueryClientProvider,
@@ -51,17 +51,21 @@ function Staff() {
           element: <Accounts />,
         },
         {
-          path: "/products",
-          element: <Products />,
+          path: "/order/approve",
+          element: <ApproveProducts />,
+        },
+        {
+          path: "/order/create",
+          element: <CreateOrder />,
         },
         {
           path: "/users/:id",
           element: <User />,
         },
-        {
-          path: "/products/:id",
-          element: <Product />,
-        },
+        // {
+        //   path: "/products/:id",
+        //   element: <Product />,
+        // },
       ],
     },
     {
