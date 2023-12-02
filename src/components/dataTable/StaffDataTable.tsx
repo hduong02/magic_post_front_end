@@ -5,38 +5,27 @@ import {
 } from "@mui/x-data-grid";
 import "./dataTable.scss";
 import { Link } from "react-router-dom";
-// import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 type Props = {
   columns: GridColDef[];
   rows: object[];
   slug: string;
+  openModal: (id: number) => void;
 };
 
-const DataTable = (props: Props) => {
-
-  const handleDelete = (id: number) => {
-    //delete the item
-    // mutation.mutate(id)
-  };
-
+const StaffDataTable = (props: Props) => {
   const actionColumn: GridColDef = {
-    field: "action",
-    headerName: "Sửa",
-    width: 200,
+    field: "approve",
+    headerName: "Actions",
+    width: 120,
     renderCell: (params) => {
       return (
-        <div className="action">
-          <div className="view">
-            <img src="/view.svg" alt="" />
-          </div>
-          <div className="delete" onClick={() => handleDelete(params.row.id)}>
-            <img src="/delete.svg" alt="" />
-          </div>
-        </div>
+        <button onClick={() => props.openModal(params.row.id)}>
+          Click Me
+        </button>
       );
     },
-  };
+  }
 
   return (
     <div className="dataTable">
@@ -44,7 +33,7 @@ const DataTable = (props: Props) => {
         
         className="dataGrid"
         rows={props.rows}
-        columns={[...props.columns]}
+        columns={[...props.columns, actionColumn]}
         initialState={{
           pagination: {
             paginationModel: {
@@ -70,4 +59,4 @@ const DataTable = (props: Props) => {
   );
 };
 
-export default DataTable;
+export default StaffDataTable;
