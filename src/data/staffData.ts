@@ -277,16 +277,24 @@ export const barChartBoxVisit = {
 
 export const waitingOrder = [
   {
-    id: 1,
-    sender: "Nguyễn Văn A",
-    sender_number: "123456789",
+    id: "1002ABC",
+    customer_id: "1002",
+    source: "Điểm tập kết",
+    source_name: "Điểm tập kết A",
   }
 ];
 
 export const confirmedOrder = [
   {
-    id: 2,
-    sender: "Nguyễn Văn B",
-    sender_number: "987654321",
+    id: "2002ABC",
+    customer_id: "2002",
+    source: "Điểm giao dịch",
+    source_name: "Điểm giao dịch B2",
+  },
+  {
+    id: "3001ABC",
+    customer_id: "2002",
+    source: "Điểm tập kết",
+    source_name: "Điểm tập kết C",
   }
 ];

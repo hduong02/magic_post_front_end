@@ -1,23 +1,25 @@
 import { useState } from "react";
 import "./Products.scss";
-import StaffDataTable from "../../components/dataTable/StaffDataTable";
+import StaffConfirmTable from "../../components/dataTable/StaffConfirmTable";
 import ReceiptForm from "../../pages/handle_orders/ReceiptForm";
 import { GridColDef } from "@mui/x-data-grid";
 import { waitingOrder } from "../../data/staffData";
 
 
 const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", width: 90 },
+  { field: "id", headerName: "Mã đơn hàng", width: 120 },
+  { field: "customer_id", headerName: "Mã khách hàng", width: 120 },
+
   {
-    field: "sender",
+    field: "source",
     type: "string",
-    headerName: "Người gửi",
-    width: 200,
+    headerName: "Gửi từ nguồn",
+    width: 120,
   },
   {
-    field: "sender_number",
+    field: "source_name",
     type: "string",
-    headerName: "SĐT người gửi",
+    headerName: "Tên điểm nguồn",
     width: 200,
   },
 ];
@@ -37,7 +39,7 @@ const ApproveProducts = () => {
       <div className="info">
         <h1>Các đơn hàng chờ xác nhận</h1>
       </div>
-      <StaffDataTable slug="products" columns={columns} rows={waitingOrder} openModal={openModal} />
+      <StaffConfirmTable slug="products" columns={columns} rows={waitingOrder} openModal={openModal} />
       {open && <ReceiptForm rowId={selectedRowId} setOpen={setOpen}/>}
     </div>
   );

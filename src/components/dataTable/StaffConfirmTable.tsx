@@ -13,15 +13,28 @@ type Props = {
   openModal: (id: number) => void;
 };
 
-const StaffDataTable = (props: Props) => {
-  const actionColumn: GridColDef = {
-    field: "approve",
-    headerName: "Actions",
+const StaffConfirmTable = (props: Props) => {
+  const viewReceipt: GridColDef = {
+    field: "view",
+    headerName: "Xem biên lai",
+    width: 150,
+    renderCell: (params) => {
+      return (
+        <button onClick={() => props.openModal(params.row.id)}>
+          Xem đơn hàng
+        </button>
+      );
+    },
+  }
+
+  const confirmColumn: GridColDef = {
+    field: "confirm",
+    headerName: "Xác nhận đơn hàng",
     width: 120,
     renderCell: (params) => {
       return (
         <button onClick={() => props.openModal(params.row.id)}>
-          Click Me
+          Xác nhận
         </button>
       );
     },
@@ -33,7 +46,7 @@ const StaffDataTable = (props: Props) => {
         
         className="dataGrid"
         rows={props.rows}
-        columns={[...props.columns, actionColumn]}
+        columns={[...props.columns, viewReceipt, confirmColumn]}
         initialState={{
           pagination: {
             paginationModel: {
@@ -59,4 +72,4 @@ const StaffDataTable = (props: Props) => {
   );
 };
 
-export default StaffDataTable;
+export default StaffConfirmTable;
