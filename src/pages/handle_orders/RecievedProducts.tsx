@@ -1,55 +1,31 @@
 import { useState } from "react";
 import "./Products.scss";
-import DataTable from "../../components/dataTable/DataTable";
+import DataTable from "../../components/dataTable/LeaderDataTable";
 import Add from "../../components/add/Add";
 import { GridColDef } from "@mui/x-data-grid";
-import { products } from "../../data/data";
+import { products } from "../../data/leaderData";
 
 const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", width: 90 },
-  // {
-  //   field: "img",
-  //   headerName: "Image",
-  //   width: 100,
-  //   renderCell: (params) => {
-  //     return <img src={params.row.img || "/noavatar.png"} alt="" />;
-  //   },
-  // },
+  { field: "id", headerName: "Mã đơn hàng", width: 120 },
+  { field: "customer_id", headerName: "Mã khách hàng", width: 120 },
+  { field: "product_type", headerName: "Loại hàng", width: 120 },
   {
-    field: "title",
+    field: "source",
     type: "string",
-    headerName: "Người gửi",
-    width: 150,
+    headerName: "Gửi từ nguồn",
+    width: 120,
   },
   {
-    field: "color",
+    field: "source_name",
     type: "string",
-    headerName: "SĐT người gửi",
-    width: 150,
+    headerName: "Tên điểm nguồn",
+    width: 200,
   },
   {
-    field: "price",
+    field: "cost",
     type: "string",
-    headerName: "Người nhận",
-    width: 150,
-  },
-  {
-    field: "producer",
-    headerName: "SĐT người nhận",
-    type: "string",
-    width: 150,
-  },
-  {
-    field: "createdAt",
-    headerName: "Địa chỉ người nhận",
-    width: 150,
-    type: "string",
-  },
-  {
-    field: "inStock",
-    headerName: "Tổng thu",
-    width: 150,
-    type: "string",
+    headerName: "Tổng thu (vnd)",
+    width: 200,
   },
 ];
 

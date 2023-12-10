@@ -1,9 +1,9 @@
-import Home from "../home/Home";
+import StaffHome from "../home/StaffHome";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Accounts from "../accounts/Accounts";
 import ApproveProducts from "../handle_orders/ApproveProducts";
 import CreateOrder from "../handle_orders/CreateOrder";
-import StaffNavbar from "../../components/navbar/StaffNavbar";
+import StaffNavbar from "../../components/navbar/StaffNavBar";
 import Footer from "../../components/footer/Footer";
 import StaffMenu from "../../components/menu/StaffMenu";
 import Login from "../login/Login";
@@ -44,7 +44,7 @@ function Staff() {
       children: [
         {
           path: "/",
-          element: <Home />,
+          element: <StaffHome />,
         },
         {
           path: "/users",

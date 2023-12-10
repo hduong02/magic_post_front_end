@@ -1,5 +1,5 @@
-import Single from "../../components/single/Single"
-import { singleUser } from "../../data/data"
+import Single from "../../components/single/CustomerSingle"
+import { singleUser } from "../../data/leaderData"
 import "./user.scss"
 
 const User = () => {

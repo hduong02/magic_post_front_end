@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import "./Menu.scss";
-import { menu } from "../../data/data";
+import { menu } from "../../data/customerData";
 
-const Menu = () => {
+const StaffMenu = () => {
   return (
     <div className="menu">
       {menu.map((item) => (
@@ -20,4 +20,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default StaffMenu;

@@ -21,7 +21,7 @@ const ChartBox = (props: Props) => {
           <span>{props.title}</span>
         </div>
         <h1>{props.number}</h1>
-        <Link to="/" style={{ color: props.color }}>
+        <Link to="http://localhost:5173/products" style={{ color: props.color }}>
           Xem tất cả
         </Link>
       </div>
@@ -51,7 +51,7 @@ const ChartBox = (props: Props) => {
           >
             {props.percentage}%
           </span>
-          <span className="duration">Tháng này</span>
+          {/* <span className="duration">Tuần này</span> */}
         </div>
       </div>
     </div>

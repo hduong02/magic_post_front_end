@@ -1,14 +1,14 @@
-import Home from "../home/LeaderHome";
+import CustomerHome from "../home/CustomerHome";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Accounts from "../accounts/Accounts";
-import RecievedProducts from "../handle_orders/RecievedProducts";
-import Navbar from "../../components/navbar/Navbar";
+import CustomerOrder from "../handle_orders/CustomerOrder";
+import CustomerNavbar from "../../components/navbar/CustomerNavBar";
 import Footer from "../../components/footer/Footer";
-import Menu from "../../components/menu/LeaderMenu";
+import Menu from "../../components/menu/CustomerMenu";
 import Login from "../login/Login";
 import "../../styles//global.scss";
 import User from "../user/User";
-import Product from "../product/CustomerTransportStatus";
+import CustomerTransportStatus from "../product/CustomerTransportStatus";
 import {
   QueryClient,
   QueryClientProvider,
@@ -21,7 +21,7 @@ function Leader() {
   const Layout = () => {
     return (
       <div className="main">
-        <Navbar />
+        <CustomerNavbar />
         <div className="container">
           <div className="menuContainer">
             <Menu />
@@ -44,23 +44,15 @@ function Leader() {
       children: [
         {
           path: "/",
-          element: <Home />,
+          element: <CustomerHome />,
         },
         {
-          path: "/users",
-          element: <Accounts />,
+          path: "/myOrder",
+          element: <CustomerOrder />,
         },
         {
-          path: "/products",
-          element: <RecievedProducts />,
-        },
-        {
-          path: "/users/:id",
-          element: <User />,
-        },
-        {
-          path: "/products/:id",
-          element: <Product />,
+          path: "/myOrder/:id",
+          element: <CustomerTransportStatus />,
         },
       ],
     },

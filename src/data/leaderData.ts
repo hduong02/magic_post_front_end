@@ -256,7 +256,7 @@ export const chartBoxConversion = {
 };
 
 export const barChartBoxRevenue = {
-  title: "Profit Earned",
+  title: "Doanh thu trong tuần",
   color: "#8884d8",
   dataKey: "profit",
   chartData: [
@@ -475,95 +475,21 @@ export const userRows = [
 
 export const products = [
   {
-    id: 1,
-    title: "Nguyễn Văn A",
-    color: "123456789",
-    producer: "987654321",
-    price: "Trần Văn B",
-    createdAt: "Cầu Giáy",
-    inStock: 2000,
+    id: "2002ABC",
+    customer_id: "2002",
+    product_type: "Tài liệu",
+    source: "Điểm giao dịch",
+    source_name: "Điểm giao dịch B2",
+    cost: "100 000"
   },
   {
-    id: 2,
-    title: "Nguyễn Văn A",
-    color: "123456789",
-    producer: "987654321",
-    price: "Trần Văn B",
-    createdAt: "Cầu Giáy",
-    inStock: 2000,
-  },
-  {
-    id: 3,
-    title: "Nguyễn Văn A",
-    color: "123456789",
-    producer: "987654321",
-    price: "Trần Văn B",
-    createdAt: "Cầu Giáy",
-    inStock: 2000,
-  },
-  {
-    id: 4,
-    title: "Nguyễn Văn A",
-    color: "123456789",
-    producer: "987654321",
-    price: "Trần Văn B",
-    createdAt: "Cầu Giáy",
-    inStock: 2000,
-  },
-  {
-    id: 5,
-    title: "Nguyễn Văn A",
-    color: "123456789",
-    producer: "987654321",
-    price: "Trần Văn B",
-    createdAt: "Cầu Giáy",
-    inStock: 2000,
-  },
-  {
-    id: 6,
-    title: "Nguyễn Văn A",
-    color: "123456789",
-    producer: "987654321",
-    price: "Trần Văn B",
-    createdAt: "Cầu Giáy",
-    inStock: 2000,
-  },
-  {
-    id: 7,
-    title: "Nguyễn Văn A",
-    color: "123456789",
-    producer: "987654321",
-    price: "Trần Văn B",
-    createdAt: "Cầu Giáy",
-    inStock: 2000,
-  },
-  {
-    id: 8,
-    title: "Nguyễn Văn A",
-    color: "123456789",
-    producer: "987654321",
-    price: "Trần Văn B",
-    createdAt: "Cầu Giáy",
-    inStock: 2000,
-  },
-  {
-    id: 9,
-    title: "Nguyễn Văn A",
-    color: "123456789",
-    producer: "987654321",
-    price: "Trần Văn B",
-    createdAt: "Cầu Giáy",
-    inStock: 2000,
-  },
-  {
-    id: 10,
-    title: "Nguyễn Văn A",
-    color: "123456789",
-    producer: "987654321",
-    price: "Trần Văn B",
-    createdAt: "Cầu Giáy",
-    inStock: 2000,
-  },
+    id: "3001ABC",
+    customer_id: "2002",
+    product_type: "Hàng hóa",
+    source: "Điểm tập kết",
+    source_name: "Điểm tập kết C",
+    cost: "100 000"
+  }
 ];
 
 

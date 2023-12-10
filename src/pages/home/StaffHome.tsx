@@ -1,7 +1,7 @@
 import BarChartBox from "../../components/barChartBox/BarChartBox";
-import BigChartBox from "../../components/bigChartBox/BigChartBox";
-import ChartBox from "../../components/chartBox/ChartBox";
-import PieChartBox from "../../components/pieCartBox/PieChartBox";
+import BigChartBox from "../../components/bigChartBox/LeaderBigChartBox";
+import ChartBox from "../../components/chartBox/LeaderChartBox";
+import PieChartBox from "../../components/pieCartBox/LeaderPieChartBox";
 import TopBox from "../../components/topBox/TopBox";
 import {
   barChartBoxRevenue,
@@ -10,7 +10,7 @@ import {
   chartBoxProduct,
   chartBoxRevenue,
   chartBoxUser,
-} from "../../data/data";
+} from "../../data/leaderData";
 import "./home.scss";
 
 const Home = () => {

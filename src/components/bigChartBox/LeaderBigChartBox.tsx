@@ -11,52 +11,52 @@ import "./bigChartBox.scss";
 const data = [
   {
     name: "Sun",
-    books: 4000,
-    clothes: 2400,
-    electronic: 2400,
+    document: 4000,
+    good: 2400,
+    // electronic: 2400,
   },
   {
     name: "Mon",
-    books: 3000,
-    clothes: 1398,
-    electronic: 2210,
+    document: 3000,
+    good: 1398,
+    // electronic: 2210,
   },
   {
     name: "Tue",
-    books: 2000,
-    clothes: 9800,
-    electronic: 2290,
+    document: 2000,
+    good: 9800,
+    // electronic: 2290,
   },
   {
     name: "Wed",
-    books: 2780,
-    clothes: 3908,
-    electronic: 2000,
+    document: 2780,
+    good: 3908,
+    // electronic: 2000,
   },
   {
     name: "Thu",
-    books: 1890,
-    clothes: 4800,
-    electronic: 2181,
+    document: 1890,
+    good: 4800,
+    // electronic: 2181,
   },
   {
     name: "Fri",
-    books: 2390,
-    clothes: 3800,
-    electronic: 2500,
+    document: 2390,
+    good: 3800,
+    // electronic: 2500,
   },
   {
     name: "Sat",
-    books: 3490,
-    clothes: 4300,
-    electronic: 2100,
+    document: 3490,
+    good: 4300,
+    // electronic: 2100,
   },
 ];
 
 const BigChartBox = () => {
   return (
     <div className="bigChartBox">
-      <h1>Revenue Analytics</h1>
+      <h1>Hàng nhận trong tuần</h1>
       <div className="chart">
         <ResponsiveContainer width="99%" height="100%">
           <AreaChart
@@ -71,26 +71,26 @@ const BigChartBox = () => {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Area
+            {/* <Area
               type="monotone"
               dataKey="electronic"
               stackId="1"
               stroke="#8884d8"
               fill="#8884d8"
+            /> */}
+            <Area
+              type="monotone"
+              dataKey="good"
+              stackId="1"
+              stroke="#0088FE"
+              fill="#0088FE"
             />
             <Area
               type="monotone"
-              dataKey="clothes"
+              dataKey="document"
               stackId="1"
-              stroke="#82ca9d"
-              fill="#82ca9d"
-            />
-            <Area
-              type="monotone"
-              dataKey="books"
-              stackId="1"
-              stroke="#ffc658"
-              fill="#ffc658"
+              stroke="#ffb026"
+              fill="#ffb026"
             />
           </AreaChart>
         </ResponsiveContainer>
