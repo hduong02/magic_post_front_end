@@ -1,8 +1,8 @@
 import StaffHome from "../home/StaffHome";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Accounts from "../accounts/Accounts";
-import ApproveProducts from "../handle_orders/ApproveProducts";
-import CreateOrder from "../handle_orders/CreateOrder";
+import Accounts from "../accounts/LeaderManageAccounts";
+import StaffApproveProducts from "../handle_orders/StaffApproveProducts";
+import StaffCreateOrder from "../handle_orders/StaffCreateOrder";
 import StaffNavbar from "../../components/navbar/StaffNavBar";
 import Footer from "../../components/footer/Footer";
 import StaffMenu from "../../components/menu/StaffMenu";
@@ -52,11 +52,11 @@ function Staff() {
         },
         {
           path: "/order/approve",
-          element: <ApproveProducts />,
+          element: <StaffApproveProducts />,
         },
         {
           path: "/order/create",
-          element: <CreateOrder />,
+          element: <StaffCreateOrder />,
         },
         {
           path: "/users/:id",

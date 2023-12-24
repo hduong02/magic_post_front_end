@@ -11,6 +11,7 @@ type Props = {
   rows: object[];
   slug: string;
   openModal: (id: number) => void;
+  openConfirmModal: (id: number) => void;
 };
 
 const StaffConfirmTable = (props: Props) => {
@@ -33,7 +34,7 @@ const StaffConfirmTable = (props: Props) => {
     width: 120,
     renderCell: (params) => {
       return (
-        <button onClick={() => props.openModal(params.row.id)}>
+        <button onClick={() => props.openConfirmModal(params.row.id)}>
           Xác nhận
         </button>
       );

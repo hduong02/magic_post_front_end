@@ -17,7 +17,13 @@ const ReceiptForm = ({ rowId, setOpen }: { rowId: number | null, setOpen: React.
     <div className={`modal ${rowId !== null ? 'open' : ''}`}>
       <div className="modal-content">
         <h2>Receipt</h2>
-        {/* Nội dung của modal */}
+        <p>ID của đơn hàng là {rowId !== null ? rowId : 'N/A'}</p>
+
+{/* 
+        <div className='receipt'>
+
+        </div> */}
+
         <button onClick={closeModal}>Đóng Modal</button>
       </div>
     </div>

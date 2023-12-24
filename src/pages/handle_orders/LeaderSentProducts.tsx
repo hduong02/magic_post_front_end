@@ -29,7 +29,7 @@ const columns: GridColDef[] = [
   },
 ];
 
-const Products = () => {
+const LeaderSentProducts = () => {
   const [open, setOpen] = useState(false);
 
   // TEST THE API
@@ -45,7 +45,9 @@ const Products = () => {
   return (
     <div className="products">
       <div className="info">
-        <h1>Hàng nhận</h1>
+        <div className="leader-banner-2">
+          <h1>Hàng đã gửi</h1> 
+        </div>
         {/* <button onClick={() => setOpen(true)}>Add New Products</button> */}
       </div>
       <DataTable slug="products" columns={columns} rows={products} />
@@ -61,4 +63,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default LeaderSentProducts;

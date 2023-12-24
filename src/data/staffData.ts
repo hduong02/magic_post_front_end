@@ -281,6 +281,12 @@ export const waitingOrder = [
     customer_id: "1002",
     source: "Điểm tập kết",
     source_name: "Điểm tập kết A",
+  },
+  {
+    id: "1003ABC",
+    customer_id: "1003",
+    source: "Điểm tập kết",
+    source_name: "Điểm tập kết D",
   }
 ];
 

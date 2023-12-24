@@ -1,12 +1,12 @@
 import CustomerHome from "../home/CustomerHome";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Accounts from "../accounts/Accounts";
+import Accounts from "../accounts/LeaderManageAccounts";
 import CustomerOrder from "../handle_orders/CustomerOrder";
 import CustomerNavbar from "../../components/navbar/CustomerNavBar";
 import Footer from "../../components/footer/Footer";
 import Menu from "../../components/menu/CustomerMenu";
 import Login from "../login/Login";
-import "../../styles//global.scss";
+import "../roles/CustomerStyle.scss";
 import User from "../user/User";
 import CustomerTransportStatus from "../product/CustomerTransportStatus";
 import {

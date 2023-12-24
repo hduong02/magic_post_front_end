@@ -7,8 +7,41 @@
     margin-bottom: 20px;
 
     button{
-      padding: 5px;
+      position: absolute;
+      z-index: 1;
+      right: 160px;
+      top: 240px;
+
+      padding: 8px;
       cursor: pointer;
+
+      border-radius: 5px; /* Bo tròn góc */
+      color: #fff; /* Màu chữ */
+      font-size: 16px; /* Kích thước chữ */
+      border: none;
+      background: #5d78d8; /* Gradient từ màu xanh dương đến màu xanh lá cây */
     }
+
+    button:hover {
+      background: #7e99f8;
+    }
+
+    .banner {
+      height: 120px;
+      width: 100%;
+      background-color: #fff;
+      position: relative;
+      background-image: url("/public/account_manager.svg");
+      background-size: cover;
+      border-radius: 4px;
+      background-position-y: -24px;
+    }
+
+    h1 {
+      color:#5d78d8;
+      margin-top: 40px;
+      margin-left: 120px;
+    }
+
   }
 }

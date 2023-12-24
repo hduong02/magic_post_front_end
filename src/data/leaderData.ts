@@ -24,13 +24,13 @@ export const menu = [
       {
         id: 3,
         title: "Hàng nhận",
-        url: "/products",
+        url: "/products/received",
         icon: "order.svg",
       },
       {
         id: 4,
         title: "Hàng gửi",
-        url: "/products",
+        url: "/products/sent",
         icon: "order.svg",
       },
     ],
@@ -575,6 +575,10 @@ export const singleUser = {
     },
   ],
 };
+
+
+
+
 export const singleProduct = {
   id: 1,
   title: "Playstation 5 Digital Edition",

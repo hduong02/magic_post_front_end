@@ -21,3 +21,79 @@ input {
   padding: 10px;
 }
 
+.leader-banner-1, .leader-banner-2,
+.staff-banner-1, .staff-banner-2 {
+  height: 120px;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  // background-image: url("/public/product.png");
+  background-size: contain;
+  border-radius: 4px;
+  // background-position-y: -24px;
+}
+
+.staff-banner-1, .staff-banner-2 {
+  background-image: url("/public/staff_product.png");
+  background-size: cover;
+  background-position-y: -100px;
+  background-position-x: 100px;
+}
+
+.leader-banner-1 {
+  background-image: url("/public/staff_product.png");
+  background-size: cover;
+  background-position-y: -100px;
+  background-position-x: 100px;
+}
+
+.leader-banner-2 {
+  background-image: url("/public/product.png");
+  background-size: cover;
+  background-position-y: -100px;
+  background-position-x: 400px;
+}
+
+
+h1 {
+  color:#5d78d8;
+  margin-top: 40px;
+  margin-left: 120px;
+}
+
+.staff-banner-1 h1, .staff-banner-2 h1{
+  margin-left: 60px;
+  color: rgb(251, 224, 17);
+}
+
+/* Trong file CSS hoặc SCSS của bạn */
+.confirm-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  text-align: center;
+}
+
+.confirm-modal p {
+  margin-bottom: 20px;
+}
+
+.confirm-modal button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.confirm-modal button:last-child {
+  margin-right: 0;
+}
+
+.confirm-modal p {
+  color: black;
+}

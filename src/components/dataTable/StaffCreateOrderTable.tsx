@@ -35,7 +35,7 @@ const StaffCreateOrderTable = (props: Props) => {
   }
 
   const createOrderButton = (
-    <button onClick={() => handleCreateOrder()}>
+    <button className='create-order-btn' onClick={() => handleCreateOrder()}>
       Tạo đơn chuyển hàng
     </button>
   );

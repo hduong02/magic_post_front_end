@@ -8,6 +8,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .modal-content {
@@ -24,6 +25,9 @@
 }
 
 .modal-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
@@ -43,4 +47,23 @@
   cursor: pointer;
 }
 
+.create-order-btn{
+  position: absolute;
+  z-index: 1;
+  right: 160px;
+  top: 240px;
+
+  padding: 8px;
+  cursor: pointer;
+
+  border-radius: 5px; /* Bo tròn góc */
+  color: #fff; /* Màu chữ */
+  font-size: 16px; /* Kích thước chữ */
+  border: none;
+  background: #5d78d8; /* Gradient từ màu xanh dương đến màu xanh lá cây */
+}
+
+.create-order-btn:hover {
+  background: #7e99f8;
+}
 /* Các kiểu khác tùy thuộc vào ý muốn thiết kế của bạn */

@@ -1,11 +1,13 @@
 import Home from "../home/LeaderHome";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Accounts from "../accounts/Accounts";
-import RecievedProducts from "../handle_orders/RecievedProducts";
+import Accounts from "../accounts/LeaderManageAccounts";
+import LeaderRecievedProducts from "../handle_orders/LeaderRecievedProducts";
+import LeaderSentProducts from "../handle_orders/LeaderSentProducts";
+
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Menu from "../../components/menu/LeaderMenu";
-import Login from "../login/Login";
+import Login from "../login/Login"; 
 import "../../styles//global.scss";
 import User from "../user/User";
 import Product from "../product/CustomerTransportStatus";
@@ -51,8 +53,8 @@ function Leader() {
           element: <Accounts />,
         },
         {
-          path: "/products",
-          element: <RecievedProducts />,
+          path: "/products/received",
+          element: <LeaderRecievedProducts />,
         },
         {
           path: "/users/:id",
@@ -61,6 +63,10 @@ function Leader() {
         {
           path: "/products/:id",
           element: <Product />,
+        },
+        {
+          path: "/products/sent",
+          element: <LeaderSentProducts />,
         },
       ],
     },

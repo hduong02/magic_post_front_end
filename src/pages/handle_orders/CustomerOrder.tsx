@@ -37,7 +37,9 @@ const CustomerOrder = () => {
   return (
     <div className="products">
       <div className="info">
-        <h1>Đơn hàng của tôi</h1>
+        <div className="leader-banner-1">
+         <h1>Đơn hàng của tôi</h1>
+         </div>
       </div>
       <CustomerOrderTable slug="products" columns={columns} rows={customerOrder} openModal={openModal} />
       {open && <ReceiptForm rowId={selectedRowId} setOpen={setOpen}/>}

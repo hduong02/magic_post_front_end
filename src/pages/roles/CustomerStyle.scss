@@ -1,0 +1,38 @@
+@import "../../styles/responsive.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #23606E;
+}
+
+.main {
+  font-family: "Inter", sans-serif;
+  background-color: rgb(229, 190, 190);
+  color: #146152;
+}
+
+.container {    
+  display: flex;
+}
+
+.menuContainer {
+  width: 250px;
+  min-width: 180px;
+  padding: 5px 20px;
+  border-right: 2px solid #FF5F5D;
+
+  @include lg{
+    width: max-content;
+  }
+}
+
+.contentContainer {
+  padding: 5px 20px;
+  width: 100%;
+}

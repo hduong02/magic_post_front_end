@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Products.scss";
 import StaffCreateOrderTable from "../../components/dataTable/StaffCreateOrderTable";
-import ReceiptForm from "../../pages/handle_orders/ReceiptForm";
+import ReceiptForm from "./ReceiptForm";
 import { GridColDef } from "@mui/x-data-grid";
 import { confirmedOrder } from "../../data/staffData";
 
@@ -37,7 +37,9 @@ const CreateOrder = () => {
   return (
     <div className="products">
       <div className="info">
-        <h1>Các đơn hàng đã xác nhận</h1>
+        <div className="staff-banner-1">
+          <h1>Tạo đơn hàng</h1>
+        </div>
       </div>
       <StaffCreateOrderTable slug="products" columns={columns} rows={confirmedOrder} openModal={openModal} />
       {open && <ReceiptForm rowId={selectedRowId} setOpen={setOpen}/>}

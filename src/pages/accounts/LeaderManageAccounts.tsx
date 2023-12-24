@@ -64,7 +64,9 @@ const Users = () => {
   return (
     <div className="accounts">
       <div className="info">
-        <h1>Tài khoản</h1>
+        <div className="banner">
+          <h1>Nhân viên</h1> 
+        </div>
         <button onClick={() => setOpen(true)}>Thêm tài khoản</button>
       </div>
       <DataTable slug="users" columns={columns} rows={userRows} />
